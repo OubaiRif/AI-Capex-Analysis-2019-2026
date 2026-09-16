@@ -1,0 +1,7 @@
+.env
+fin_data.db
+__pycache__/
+*.pyc
+Things to write in the post.docx
+linkedin post.docx
+linkedin_post_draft.md

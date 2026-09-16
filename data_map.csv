@@ -1,0 +1,9 @@
+Data Point,Source,Method,Limitations
+Total Revenue FY2022-2025,10-K income statement,"SEC Company Facts API, tag Revenues or RevenueFromContractWithCustomerExcludingAssessedTax",tag names vary by company; must confirm which one each uses; Microsoft/Oracle fiscal years don't match calendar years.
+Capex FY2022-2025,10-K cash flow statement,SEC API/ Company Facts tag PaymentsToAcquirePropertyPlantAndEquipment,Multiple PP&E-related tags exist; only the Payments tag is annual spend — must not confuse with balance-sheet stock values
+AI-specific revenue,10-K,SEC Company Facts API,not a standardized XBRL element; requires manual extraction
+AI-specific revenue,Earning Calls,company's investor relations,manual extraction
+AI-specific revenue,10-K,Segment Reporting,"Available mostly under Cloud, requires manual extraction, proxy measure"
+Capex Guidence FY2026,Earning Call,transcript search,manual extraction
+depreciation useful-life,10-K Property and Equipment,Manual,"policy changes only appear as one sentence, easy to miss"
+fiscal year end,JSON or 10-K cover page,use tag fy and fp,
