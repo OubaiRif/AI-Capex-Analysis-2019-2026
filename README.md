@@ -1,5 +1,7 @@
 # AI Capex vs. Revenue (FY2019–2026)
 
+![Capex as a share of revenue, FY2019-2026](capex_pct_chart.jpg)
+
 How much of Big Tech's revenue is going into AI infrastructure, and how is each company actually paying for it? This project answers that using only primary sources — SEC filings, earnings call transcripts, and official press releases — not analyst estimates.
 
 Five companies: Microsoft, Alphabet, Amazon, Meta, Oracle.
@@ -20,7 +22,7 @@ Five companies: Microsoft, Alphabet, Amazon, Meta, Oracle.
 - `ai_disclosures.csv` — hand-extracted findings per company on AI-specific revenue, forward capex guidance, depreciation/useful-life policy, and financing activity (debt raises, equity raises, joint ventures). Sourced from 10-Ks, 10-Qs, earnings call transcripts, and official investor-relations releases — third-party transcript sites were used only to locate the right document, never cited as the source of record.
 
 **Methodology**
-- `Methodology.odt` — full documentation of sourcing rules, tag-mapping decisions, verification steps, and known limitations.
+- [`METHODOLOGY.md`](METHODOLOGY.md) — full documentation of sourcing rules, tag-mapping decisions, verification steps, and known limitations.
 - `data_map.csv` — the original data-needs planning document (source, method, and limitations per data point).
 
 ## How to run it
@@ -51,7 +53,7 @@ python3 plot_fy_windows.py     # regenerates the fiscal-year alignment chart
 ## Scope and limitations
 
 - Five companies only — not representative of the broader AI infrastructure sector.
-- Microsoft (June) and Oracle (May) fiscal year-ends don't align with the calendar-year companies (Alphabet, Amazon, Meta) — the "same" fiscal year label can span calendar windows up to ~7 months apart. See `fy_windows.jpg` and `Methodology.odt` for detail.
+- Microsoft (June) and Oracle (May) fiscal year-ends don't align with the calendar-year companies (Alphabet, Amazon, Meta) — the "same" fiscal year label can span calendar windows up to ~7 months apart. See `fy_windows.jpg` and [`METHODOLOGY.md`](METHODOLOGY.md) for detail.
 - Only Meta and Amazon disclosed isolated, AI-specific revenue figures; the other companies report AI revenue as part of a broader segment (Azure, AWS, Google Cloud) — flagged as "Partial" in `ai_disclosures.csv` rather than treated as precise.
 
 ## Author
